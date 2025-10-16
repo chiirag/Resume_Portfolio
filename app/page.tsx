@@ -6,6 +6,7 @@ import Chatbot from '@/components/Chatbot'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [expandedSkills, setExpandedSkills] = useState<string | null>(null)
 
   const skills = [
     {
@@ -299,7 +300,7 @@ export default function Home() {
 
                     {/* Skills grid */}
                     <div className="grid grid-cols-2 gap-2 mb-2">
-                      {skill.relatedSkills.slice(0, 6).map((relatedSkill, idx) => (
+                      {skill.relatedSkills.slice(0, expandedSkills === skill.name ? skill.relatedSkills.length : 6).map((relatedSkill, idx) => (
                         <div
                           key={relatedSkill}
                           className={`bg-gradient-to-r ${skill.color}/20 border border-${skill.color.split('-')[1]}-500/30 text-${skill.color.split('-')[1]}-200 px-3 py-1.5 rounded-lg text-xs font-medium hover:${skill.color}/30 transition-all duration-200 transform hover:scale-105`}
@@ -315,11 +316,17 @@ export default function Home() {
                       ))}
                     </div>
 
-                    {/* Show more indicator */}
+                    {/* Show more/less indicator */}
                     {skill.relatedSkills.length > 6 && (
                       <div className="text-center pt-1 border-t border-purple-500/20">
-                        <span className="text-purple-400 text-xs font-medium hover:text-purple-300 transition-colors">
-                          +{skill.relatedSkills.length - 6} more skills
+                        <span
+                          className="text-purple-400 text-xs font-medium hover:text-purple-300 transition-colors cursor-pointer pointer-events-auto"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            setExpandedSkills(expandedSkills === skill.name ? null : skill.name)
+                          }}
+                        >
+                          {expandedSkills === skill.name ? 'Show less' : `+${skill.relatedSkills.length - 6} more skills`}
                         </span>
                       </div>
                     )}
