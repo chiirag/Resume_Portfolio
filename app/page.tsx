@@ -283,23 +283,53 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{skill.name}</h3>
 
-                {/* Tooltip with related skills */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 whitespace-nowrap border border-purple-500/30 shadow-lg">
+                {/* Enhanced Tooltip with related skills */}
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-4 py-3 bg-gradient-to-b from-slate-800 to-slate-900 text-white text-sm rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-20 shadow-2xl border border-purple-500/40 backdrop-blur-sm min-w-[280px] max-w-[320px]">
                   <div className="text-center">
-                    <div className="font-semibold text-purple-300 mb-1">Related Skills:</div>
-                    <div className="flex flex-wrap gap-1 justify-center">
-                      {skill.relatedSkills.slice(0, 5).map((relatedSkill) => (
-                        <span key={relatedSkill} className="bg-purple-500/20 text-purple-200 px-2 py-1 rounded text-xs">
-                          {relatedSkill}
-                        </span>
-                      ))}
-                      {skill.relatedSkills.length > 5 && (
-                        <span className="text-purple-400 text-xs">+{skill.relatedSkills.length - 5} more</span>
-                      )}
+                    {/* Header with icon */}
+                    <div className="flex items-center justify-center mb-3">
+                      <div className={`w-8 h-8 ${skill.color} rounded-full flex items-center justify-center mr-2 shadow-lg`}>
+                        <skill.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-purple-300 text-xs uppercase tracking-wide">Related Skills</div>
+                        <div className="text-xs text-gray-400">{skill.relatedSkills.length} skills</div>
+                      </div>
                     </div>
+
+                    {/* Skills grid */}
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      {skill.relatedSkills.slice(0, 6).map((relatedSkill, idx) => (
+                        <div
+                          key={relatedSkill}
+                          className={`bg-gradient-to-r ${skill.color}/20 border border-${skill.color.split('-')[1]}-500/30 text-${skill.color.split('-')[1]}-200 px-3 py-1.5 rounded-lg text-xs font-medium hover:${skill.color}/30 transition-all duration-200 transform hover:scale-105`}
+                          style={{
+                            animationDelay: `${idx * 100}ms`,
+                            animation: 'fadeInUp 0.3s ease-out forwards',
+                            opacity: 0,
+                            transform: 'translateY(10px)'
+                          }}
+                        >
+                          {relatedSkill}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Show more indicator */}
+                    {skill.relatedSkills.length > 6 && (
+                      <div className="text-center pt-1 border-t border-purple-500/20">
+                        <span className="text-purple-400 text-xs font-medium hover:text-purple-300 transition-colors">
+                          +{skill.relatedSkills.length - 6} more skills
+                        </span>
+                      </div>
+                    )}
                   </div>
-                  {/* Tooltip arrow */}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-800"></div>
+
+                  {/* Enhanced tooltip arrow with gradient */}
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                    <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-800"></div>
+                    <div className="absolute top-[-1px] left-[-4px] w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-purple-500/40"></div>
+                  </div>
                 </div>
               </div>
             ))}
