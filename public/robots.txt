@@ -1,0 +1,10 @@
+# Allow all bots
+User-agent: *
+Allow: /
+
+# Disallow sensitive paths
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://resume-portfolio.vercel.app/sitemap.xml

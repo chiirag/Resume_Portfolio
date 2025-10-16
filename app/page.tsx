@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Brain, Sparkles, Github, Linkedin, Mail, ExternalLink, Code, Database, MessageSquare, ChevronDown, Menu, X } from 'lucide-react'
+import { Brain, Sparkles, Github, Linkedin, Mail, ExternalLink, Code, Database, MessageSquare, ChevronDown, Menu, X, Phone } from 'lucide-react'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -141,7 +141,7 @@ export default function Home() {
               <a href="#projects" className="text-gray-300 hover:text-purple-400 transition">Projects</a>
               <a href="#experience" className="text-gray-300 hover:text-purple-400 transition">Experience</a>
               <a href="#contact" className="text-gray-300 hover:text-purple-400 transition">Contact</a>
-              <a href="/Chirag_Jain_CV.pdf" download className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">Resume</a>
+              <a href="/Chirag_Jain_CV.pdf" download className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">Download CV</a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -161,7 +161,7 @@ export default function Home() {
               <a href="#projects" className="block text-gray-300 hover:text-purple-400 transition py-2">Projects</a>
               <a href="#experience" className="block text-gray-300 hover:text-purple-400 transition py-2">Experience</a>
               <a href="#contact" className="block text-gray-300 hover:text-purple-400 transition py-2">Contact</a>
-              <a href="/Chirag_Jain_CV.pdf" download className="block text-gray-300 hover:text-purple-400 transition py-2">Download Resume</a>
+              <a href="/Chirag_Jain_CV.pdf" download className="block text-gray-300 hover:text-purple-400 transition py-2">Download CV</a>
             </div>
           )}
         </div>
@@ -203,6 +203,9 @@ export default function Home() {
             </a>
             <a href="mailto:chiragjaindsm@gmail.com" className="text-gray-400 hover:text-purple-400 transition transform hover:scale-110">
               <Mail className="w-6 h-6" />
+            </a>
+            <a href="tel:+917338522654" className="text-gray-400 hover:text-purple-400 transition transform hover:scale-110">
+              <Phone className="w-6 h-6" />
             </a>
           </div>
 
@@ -351,6 +354,13 @@ export default function Home() {
             >
               <Mail className="w-5 h-5 mr-2" />
               Send an Email
+            </a>
+            <a
+              href="tel:+917338522654"
+              className="bg-slate-800/50 border border-purple-500/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-slate-800 transition inline-flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              +91 7338522654
             </a>
             <a
               href="https://linkedin.com/in/chiragjain3"
