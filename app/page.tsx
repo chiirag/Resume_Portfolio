@@ -158,13 +158,13 @@ export default function Home() {
           </h2>
           <div className="bg-slate-900/50 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 md:p-12">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              I'm a passionate Generative AI Engineer with expertise in building intelligent systems that leverage the power of large language models and cutting-edge AI technologies. My work focuses on creating practical, scalable AI solutions that solve real-world problems.
+              I&apos;m a passionate Generative AI Engineer with expertise in building intelligent systems that leverage the power of large language models and cutting-edge AI technologies. My work focuses on creating practical, scalable AI solutions that solve real-world problems.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
               With a strong background in machine learning, natural language processing, and software engineering, I specialize in RAG systems, prompt engineering, fine-tuning LLMs, and developing end-to-end AI applications.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm constantly exploring new frontiers in AI, from multi-modal models to efficient deployment strategies, always striving to push the boundaries of what's possible with generative AI.
+              I&apos;m constantly exploring new frontiers in AI, from multi-modal models to efficient deployment strategies, always striving to push the boundaries of what&apos;s possible with generative AI.
             </p>
           </div>
         </div>
@@ -270,10 +270,10 @@ export default function Home() {
       <section id="contact" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Interested in collaborating or have a project in mind? I'd love to hear from you!
+            Interested in collaborating or have a project in mind? I&apos;d love to hear from you!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
