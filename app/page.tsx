@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Brain, Sparkles, Github, Linkedin, Mail, ExternalLink, Code, Database, MessageSquare, ChevronDown, Menu, X, Phone } from 'lucide-react'
+import Chatbot from '@/components/Chatbot'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -383,6 +384,9 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      {/* AI Chatbot */}
+      <Chatbot />
     </div>
   )
 }
