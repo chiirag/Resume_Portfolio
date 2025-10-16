@@ -168,11 +168,11 @@ export default function Home() {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-gray-300 hover:text-purple-400 transition">About</a>
-              <a href="#skills" className="text-gray-300 hover:text-purple-400 transition">Skills</a>
+              <a href="/about" className="text-gray-300 hover:text-purple-400 transition">About</a>
+              <a href="/skills" className="text-gray-300 hover:text-purple-400 transition">Skills</a>
               <a href="/projects" className="text-gray-300 hover:text-purple-400 transition">Projects</a>
-              <a href="#experience" className="text-gray-300 hover:text-purple-400 transition">Experience</a>
-              <a href="#contact" className="text-gray-300 hover:text-purple-400 transition">Contact</a>
+              <a href="/experience" className="text-gray-300 hover:text-purple-400 transition">Experience</a>
+              <a href="/contact" className="text-gray-300 hover:text-purple-400 transition">Contact</a>
               <a href="/Chirag_Jain_CV.pdf" download className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">Download CV</a>
             </div>
 
@@ -188,11 +188,11 @@ export default function Home() {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className="md:hidden py-4 space-y-2">
-              <a href="#about" className="block text-gray-300 hover:text-purple-400 transition py-2">About</a>
-              <a href="#skills" className="block text-gray-300 hover:text-purple-400 transition py-2">Skills</a>
+              <a href="/about" className="block text-gray-300 hover:text-purple-400 transition py-2">About</a>
+              <a href="/skills" className="block text-gray-300 hover:text-purple-400 transition py-2">Skills</a>
               <a href="/projects" className="block text-gray-300 hover:text-purple-400 transition py-2">Projects</a>
-              <a href="#experience" className="block text-gray-300 hover:text-purple-400 transition py-2">Experience</a>
-              <a href="#contact" className="block text-gray-300 hover:text-purple-400 transition py-2">Contact</a>
+              <a href="/experience" className="block text-gray-300 hover:text-purple-400 transition py-2">Experience</a>
+              <a href="/contact" className="block text-gray-300 hover:text-purple-400 transition py-2">Contact</a>
               <a href="/Chirag_Jain_CV.pdf" download className="block text-gray-300 hover:text-purple-400 transition py-2">Download CV</a>
             </div>
           )}
@@ -218,10 +218,10 @@ export default function Home() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <a href="#contact" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">
+            <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">
               Get in Touch
             </a>
-            <a href="#projects" className="bg-slate-800/50 border border-purple-500/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-slate-800 transition">
+            <a href="/projects" className="bg-slate-800/50 border border-purple-500/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-slate-800 transition">
               View Projects
             </a>
           </div>
