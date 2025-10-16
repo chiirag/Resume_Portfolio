@@ -51,37 +51,73 @@ export default function Home() {
       role: 'Data Science Manager - AI Architect',
       company: 'Bain & Company - NPS Prism',
       period: 'Apr 2024 - Present',
-      description: 'Leading a high-performing AI team of 10 (8 Data Scientists, 2 Data Engineers) to modernize NPS Prism with AI-driven automation. Built Text-to-SQL solutions and multi-domain RAG chatbots with AI agents, saving $4M annually through AI-based fraud detection and quality validation.'
+      bullets: [
+        'Led and built a high-performing AI team (8 Data Scientists, 2 Data Engineers) to modernize NPS Prism with AI-driven automation, deploying scalable solutions using Docker and Kubernetes',
+        'Built Text-to-SQL solutions using Generative AI/LLMs fine-tuned on domain-specific schemas, improving query accuracy by 30–40% and enabling self-service analytics across business teams',
+        'Designed and deployed multi-domain RAG chatbots fine-tuned with LoRA, integrated with n8n, LangGraph, and CrewAI for workflow orchestration and multi-agent collaboration, using MCP for context exchange',
+        'Improved survey data quality by detecting fraudulent and low-value responses through AI-based content validation, saving $4M annually and enabling more reliable insights',
+        'Implemented RLHF pipelines to optimize LLM responses for business-specific tasks, aligning model outputs with analyst preferences and improving factual accuracy and relevance by 25%'
+      ]
     },
     {
       role: 'Data Science Manager (AVP)',
       company: 'Citi',
       period: 'Feb 2023 - Apr 2024',
-      description: 'Managed a team of 7 data scientists to architect GenAI-powered voice analytics pipeline processing 50M+ calls. Leveraged Whisper, LLMs, and clustering to extract insights, delivering $14M in cost savings and $72M in incremental revenue through targeted AI-driven interventions.'
+      bullets: [
+        'Managed a team of 7 data scientists to architect and deploy a GenAI-powered voice analytics pipeline leveraging speech-to-text models, LLMs, and embedding-based clustering to process 50M+ customer calls and extract complaint themes, sentiment, and intent at scale',
+        'Optimized end-to-end LLMOps workflows using Docker, Kubernetes, and CI/CD for scalable model training and deployment, enabling targeted AI-driven interventions that reduced complaint volume and delivered $14M in cost savings and $72M in incremental revenue',
+        'Data Size - 12 million calls per year, 30 million customers & 2 billion touchpoints || Tech Stack - OpenAI\'s Whisper, BERT-based QnA, Flan T5 & Llama'
+      ]
     },
     {
       role: 'Research Data Science Manager (AVP)',
       company: 'Barclays Investment Bank',
       period: 'Jan 2022 - Dec 2022',
-      description: 'Led 5 research data scientists developing transformer-based models (LSTMs, BERT) analyzing 500M+ news articles and quarterly reports to quantify their influence on stock price movements. Authored two research papers on NLP for stock price prediction.'
+      bullets: [
+        'Led and managed a team of 5 research data scientists to develop deep learning models (LSTMs and transformer-based architectures) that analyzed news articles and quarterly reports to quantify their influence on stock price movements',
+        'Authored two research papers for Barclays Data & Investment Science, exploring the use of Natural Language Processing to predict stock prices',
+        'Data Size - 500 million news articles, 600 billion market data points || Tech Stack - Python, PySpark, Azure, NLP, Transformers, LLMs, Topic Modeling, Regressions, Neural Networks'
+      ]
     },
     {
       role: 'Lead Applied Data Scientist',
-      company: 'dunnhumby (Tesco Group)',
+      company: 'dunnhumby (part of Tesco Group)',
       period: 'Oct 2018 - Jan 2022',
-      description: 'Worked on 100B+ retail transactions to develop ML/DL models for optimal Pricing, Promotion, & Assortment strategies. Built recommendation system for Tesco using collaborative filtering and user-item embeddings for personalized offers at scale.'
+      bullets: [
+        'Worked on big retail transaction-level datasets to develop and implement ML/DL models to identify optimal Pricing, Promotion, & Assortment strategies for leading global retailers in the world',
+        'Built a recommendation system for Tesco to identify top personalized offers for users, leveraging collaborative filtering, user-item embeddings, and purchase history analytics',
+        'Data Size - ~100 billion item level transactions per year || Tech – Python, PySpark, GCP'
+      ]
     },
     {
       role: 'Senior Data Scientist',
       company: 'Tredence',
       period: 'Sep 2015 - Sep 2018',
-      description: 'Developed ML classification models to classify 3M SKUs into predefined product hierarchy. Built unified customer profiles using demographic segmentation and behavioral clustering. Designed and enhanced multiple dashboards for a leading retailer tracking customer experience metrics.'
+      bullets: [
+        'Developed machine learning classification models to classify 3M SKUs into predefined product hierarchy',
+        'Built unified customer profiles using demographic segmentation and behavioral clustering',
+        'Designed and enhanced multiple dashboards for a leading retailer tracking customer experience metrics'
+      ]
+    },
+    {
+      role: 'Data Scientist',
+      company: 'Forgify 3D Tech',
+      period: 'Jul 2014 - Sep 2015',
+      bullets: [
+        'Improved performance accuracy by 25% through creating 20+ dashboards for real-time metric tracking',
+        'Improved ROAS by 20% by optimizing spending across 3 marketing channels'
+      ]
     },
     {
       role: 'Freelance Data Scientist',
       company: 'Codementor',
       period: 'Jul 2010 - Jun 2014',
-      description: 'Completed 300+ Data Science projects with an average rating of 4.98/5. Developed and delivered 150+ projects using various ML/DL techniques. Created 50+ dashboards using Tableau, Power BI, Dash, Plotly, Matplotlib, and Seaborn.'
+      bullets: [
+        'Completed 300+ Data Science projects with an average rating of 4.98/5',
+        'Profile Link - https://www.codementor.io/@chiirag',
+        'Developed and delivered 150+ projects using various ML/DL techniques',
+        'Created 50+ dashboards using Tableau, Power BI, Dash, Plotly, Matplotlib, Seaborn'
+      ]
     },
   ]
 
@@ -285,7 +321,14 @@ export default function Home() {
                   </div>
                   <span className="text-gray-400 mt-2 md:mt-0">{exp.period}</span>
                 </div>
-                <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                <ul className="space-y-3">
+                  {exp.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="text-gray-300 leading-relaxed flex items-start">
+                      <span className="text-purple-400 mr-3 mt-1">•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
