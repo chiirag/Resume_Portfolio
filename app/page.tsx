@@ -8,12 +8,42 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const skills = [
-    { name: 'LLMs & AI Agents', icon: Brain, color: 'bg-purple-500' },
-    { name: 'RAG & Fine-Tuning', icon: Database, color: 'bg-blue-500' },
-    { name: 'MLOps & LLMOps', icon: Code, color: 'bg-green-500' },
-    { name: 'Team Leadership', icon: MessageSquare, color: 'bg-orange-500' },
-    { name: 'Deep Learning & NLP', icon: Sparkles, color: 'bg-pink-500' },
-    { name: 'Data Engineering', icon: Database, color: 'bg-indigo-500' },
+    {
+      name: 'LLMs & AI Agents',
+      icon: Brain,
+      color: 'bg-purple-500',
+      relatedSkills: ['GPT-4', 'Llama', 'Claude', 'Mistral', 'LangChain', 'CrewAI', 'AutoGen', 'Fine-tuning', 'LoRA', 'RLHF']
+    },
+    {
+      name: 'RAG & Fine-Tuning',
+      icon: Database,
+      color: 'bg-blue-500',
+      relatedSkills: ['Vector Databases', 'Embeddings', 'Retrieval Systems', 'Context Management', 'Similarity Search', 'Document Processing', 'Knowledge Bases']
+    },
+    {
+      name: 'MLOps & LLMOps',
+      icon: Code,
+      color: 'bg-green-500',
+      relatedSkills: ['Docker', 'Kubernetes', 'CI/CD', 'Model Deployment', 'Monitoring', 'A/B Testing', 'Scalability', 'Performance Optimization']
+    },
+    {
+      name: 'Team Leadership',
+      icon: MessageSquare,
+      color: 'bg-orange-500',
+      relatedSkills: ['Team Management', 'Cross-functional Collaboration', 'Project Planning', 'Stakeholder Management', 'Mentoring', 'Agile Methodologies']
+    },
+    {
+      name: 'Deep Learning & NLP',
+      icon: Sparkles,
+      color: 'bg-pink-500',
+      relatedSkills: ['Transformers', 'BERT', 'PyTorch', 'TensorFlow', 'Text Classification', 'Named Entity Recognition', 'Sentiment Analysis', 'Topic Modeling']
+    },
+    {
+      name: 'Data Engineering',
+      icon: Database,
+      color: 'bg-indigo-500',
+      relatedSkills: ['PySpark', 'SQL', 'ETL Pipelines', 'Data Warehousing', 'Big Data Processing', 'Real-time Streaming', 'Data Quality']
+    },
   ]
 
   const projects = [
@@ -128,9 +158,9 @@ export default function Home() {
       <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md z-50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.location.href = '/'}>
               <Brain className="w-8 h-8 text-purple-500" />
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-300 transition">
                 GenAI Portfolio
               </span>
             </div>
@@ -246,12 +276,31 @@ export default function Home() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 transition transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+                className="bg-slate-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 transition transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 group relative"
               >
                 <div className={`${skill.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
                   <skill.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{skill.name}</h3>
+
+                {/* Tooltip with related skills */}
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 whitespace-nowrap border border-purple-500/30 shadow-lg">
+                  <div className="text-center">
+                    <div className="font-semibold text-purple-300 mb-1">Related Skills:</div>
+                    <div className="flex flex-wrap gap-1 justify-center">
+                      {skill.relatedSkills.slice(0, 5).map((relatedSkill) => (
+                        <span key={relatedSkill} className="bg-purple-500/20 text-purple-200 px-2 py-1 rounded text-xs">
+                          {relatedSkill}
+                        </span>
+                      ))}
+                      {skill.relatedSkills.length > 5 && (
+                        <span className="text-purple-400 text-xs">+{skill.relatedSkills.length - 5} more</span>
+                      )}
+                    </div>
+                  </div>
+                  {/* Tooltip arrow */}
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-800"></div>
+                </div>
               </div>
             ))}
           </div>
