@@ -71,6 +71,18 @@ export default function Home() {
       period: 'Oct 2018 - Jan 2022',
       description: 'Worked on 100B+ retail transactions to develop ML/DL models for optimal Pricing, Promotion, & Assortment strategies. Built recommendation system for Tesco using collaborative filtering and user-item embeddings for personalized offers at scale.'
     },
+    {
+      role: 'Senior Data Scientist',
+      company: 'Tredence',
+      period: 'Sep 2015 - Sep 2018',
+      description: 'Developed ML classification models to classify 3M SKUs into predefined product hierarchy. Built unified customer profiles using demographic segmentation and behavioral clustering. Designed and enhanced multiple dashboards for a leading retailer tracking customer experience metrics.'
+    },
+    {
+      role: 'Freelance Data Scientist',
+      company: 'Codementor',
+      period: 'Jul 2010 - Jun 2014',
+      description: 'Completed 300+ Data Science projects with an average rating of 4.98/5. Developed and delivered 150+ projects using various ML/DL techniques. Created 50+ dashboards using Tableau, Power BI, Dash, Plotly, Matplotlib, and Seaborn.'
+    },
   ]
 
   return (
@@ -93,6 +105,7 @@ export default function Home() {
               <a href="#projects" className="text-gray-300 hover:text-purple-400 transition">Projects</a>
               <a href="#experience" className="text-gray-300 hover:text-purple-400 transition">Experience</a>
               <a href="#contact" className="text-gray-300 hover:text-purple-400 transition">Contact</a>
+              <a href="/Chirag_Jain_CV.pdf" download className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">Resume</a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -112,6 +125,7 @@ export default function Home() {
               <a href="#projects" className="block text-gray-300 hover:text-purple-400 transition py-2">Projects</a>
               <a href="#experience" className="block text-gray-300 hover:text-purple-400 transition py-2">Experience</a>
               <a href="#contact" className="block text-gray-300 hover:text-purple-400 transition py-2">Contact</a>
+              <a href="/Chirag_Jain_CV.pdf" download className="block text-gray-300 hover:text-purple-400 transition py-2">Download Resume</a>
             </div>
           )}
         </div>
@@ -312,7 +326,7 @@ export default function Home() {
       <footer className="border-t border-purple-500/20 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} Chirag Jain. Built with Next.js & TailwindCSS
+            © {new Date().getFullYear()} Chirag Jain
           </p>
         </div>
       </footer>
