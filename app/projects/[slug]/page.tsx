@@ -136,8 +136,9 @@ The system significantly improved customer engagement and purchase conversion ra
   }
 ]
 
-export default function ProjectDetail({ params }: { params: { slug: string } }) {
-  const project = projects.find(p => p.id === params.slug)
+export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params
+  const project = projects.find(p => p.id === resolvedParams.slug)
 
   if (!project) {
     return (
