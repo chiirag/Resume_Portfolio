@@ -1,6 +1,8 @@
 import { ArrowLeft, Brain, Database, Code, MessageSquare, Sparkles, ExternalLink, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 const skills = [
   {
     name: 'LLMs & AI Agents',
@@ -192,7 +194,7 @@ export default function SkillsPage() {
               Ready to Collaborate?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how my expertise can help bring your AI projects to life.
+              Let&apos;s discuss how my expertise can help bring your AI projects to life.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link

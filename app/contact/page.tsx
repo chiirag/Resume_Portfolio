@@ -1,6 +1,8 @@
 import { ArrowLeft, Mail, Phone, Github, Linkedin, MapPin, Clock, MessageSquare, ExternalLink, Send, Download } from 'lucide-react'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
@@ -32,10 +34,10 @@ export default function ContactPage() {
       <section className="pt-24 pb-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Let's Connect
+            Let&apos;s Connect
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            I'm always excited to discuss AI opportunities, innovative projects, or potential collaborations. Let's start a conversation!
+            I&apos;m always excited to discuss AI opportunities, innovative projects, or potential collaborations. Let&apos;s start a conversation!
           </p>
 
           {/* Quick Stats */}
@@ -277,7 +279,7 @@ export default function ContactPage() {
                 Ready to Start a Conversation?
               </h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Whether you have a specific project in mind, want to discuss AI opportunities, or just want to connect, I'd love to hear from you.
+                Whether you have a specific project in mind, want to discuss AI opportunities, or just want to connect, I&apos;d love to hear from you.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a

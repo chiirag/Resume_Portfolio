@@ -1,6 +1,8 @@
 import { ArrowLeft, Briefcase, Calendar, MapPin, Award, TrendingUp, Users, Target } from 'lucide-react'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 const experience = [
   {
     role: 'Data Science Manager - AI Architect',
@@ -272,7 +274,7 @@ export default function ExperiencePage() {
               Interested in My Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how my expertise and leadership experience can contribute to your organization's AI initiatives.
+              Let&apos;s discuss how my expertise and leadership experience can contribute to your organization&apos;s AI initiatives.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
@@ -280,7 +282,7 @@ export default function ExperiencePage() {
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105 inline-flex items-center justify-center"
               >
                 <Users className="w-5 h-5 mr-2" />
-                Let's Connect
+                Let&apos;s Connect
               </Link>
               <Link
                 href="/projects"

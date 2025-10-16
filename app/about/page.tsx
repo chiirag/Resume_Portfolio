@@ -1,6 +1,8 @@
 import { ArrowLeft, Brain, Sparkles, Award, TrendingUp, Users, Calendar, Target } from 'lucide-react'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950">
@@ -224,7 +226,7 @@ export default function AboutPage() {
 
               {/* Call to Action */}
               <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Let's Connect</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Let&apos;s Connect</h3>
                 <p className="text-gray-300 text-sm mb-4">
                   Interested in discussing AI opportunities or collaboration?
                 </p>
