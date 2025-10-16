@@ -21,28 +21,28 @@ export default function Home() {
       title: 'Multi-Domain RAG Chatbots with AI Agents',
       description: 'Designed and deployed multi-domain RAG chatbots fine-tuned with LoRA at Bain & Company. Integrated with n8n, LangGraph, and CrewAI for workflow orchestration and multi-agent collaboration, using MCP for context exchange across enterprise systems.',
       tech: ['LangGraph', 'CrewAI', 'LoRA', 'n8n', 'MCP'],
-      link: '#',
+      link: '/projects/multi-domain-rag-chatbots',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Text-to-SQL with GenAI & LLMs',
       description: 'Built enterprise Text-to-SQL solutions using Generative AI/LLMs fine-tuned on domain-specific schemas. Improved query accuracy by 30-40% and enabled self-service analytics across business teams, transforming natural language into complex SQL queries.',
       tech: ['GPT-4', 'LangChain', 'Fine-tuning', 'RAG'],
-      link: '#',
+      link: '/projects/text-to-sql-genai',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'GenAI Voice Analytics Pipeline',
       description: 'Architected and deployed a GenAI-powered voice analytics pipeline at Citi, leveraging Whisper, LLMs, and embedding-based clustering to process 50M+ customer calls. Extracted complaint themes and sentiment, delivering $14M in cost savings and $72M in incremental revenue.',
       tech: ['Whisper', 'BERT', 'Flan T5', 'Llama', 'Docker'],
-      link: '#',
+      link: '/projects/genai-voice-analytics',
       gradient: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Personalized Recommendation System',
       description: 'Built a recommendation system for Tesco at dunnhumby, identifying top personalized offers for millions of users. Leveraged collaborative filtering, user-item embeddings, and purchase history analytics on 100B+ retail transactions per year.',
       tech: ['PySpark', 'Collaborative Filtering', 'GCP', 'Embeddings'],
-      link: '#',
+      link: '/projects/personalized-recommendation-system',
       gradient: 'from-orange-500 to-red-500'
     },
   ]
@@ -139,7 +139,7 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#about" className="text-gray-300 hover:text-purple-400 transition">About</a>
               <a href="#skills" className="text-gray-300 hover:text-purple-400 transition">Skills</a>
-              <a href="#projects" className="text-gray-300 hover:text-purple-400 transition">Projects</a>
+              <a href="/projects" className="text-gray-300 hover:text-purple-400 transition">Projects</a>
               <a href="#experience" className="text-gray-300 hover:text-purple-400 transition">Experience</a>
               <a href="#contact" className="text-gray-300 hover:text-purple-400 transition">Contact</a>
               <a href="/Chirag_Jain_CV.pdf" download className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">Download CV</a>
@@ -159,7 +159,7 @@ export default function Home() {
             <div className="md:hidden py-4 space-y-2">
               <a href="#about" className="block text-gray-300 hover:text-purple-400 transition py-2">About</a>
               <a href="#skills" className="block text-gray-300 hover:text-purple-400 transition py-2">Skills</a>
-              <a href="#projects" className="block text-gray-300 hover:text-purple-400 transition py-2">Projects</a>
+              <a href="/projects" className="block text-gray-300 hover:text-purple-400 transition py-2">Projects</a>
               <a href="#experience" className="block text-gray-300 hover:text-purple-400 transition py-2">Experience</a>
               <a href="#contact" className="block text-gray-300 hover:text-purple-400 transition py-2">Contact</a>
               <a href="/Chirag_Jain_CV.pdf" download className="block text-gray-300 hover:text-purple-400 transition py-2">Download CV</a>
