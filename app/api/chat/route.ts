@@ -3,13 +3,14 @@ import OpenAI from 'openai'
 
 // Disable static generation for this route
 export const dynamic = 'force-dynamic'
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-})
+export const runtime = 'edge'
 
 export async function POST(req: NextRequest) {
   try {
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    })
+
     const { messages } = await req.json()
 
     if (!process.env.OPENAI_API_KEY) {

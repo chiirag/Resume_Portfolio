@@ -78,7 +78,7 @@ export default function ProjectsPage() {
             Featured Projects
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            A showcase of enterprise-grade AI solutions I've built, delivering measurable business impact across diverse industries and use cases.
+            A showcase of enterprise-grade AI solutions I&apos;ve built, delivering measurable business impact across diverse industries and use cases.
           </p>
 
           {/* Stats */}
@@ -168,7 +168,7 @@ export default function ProjectsPage() {
             Interested in Collaboration?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            I'm always excited to discuss new opportunities and innovative AI projects. Let's connect and explore how we can work together!
+            I&apos;m always excited to discuss new opportunities and innovative AI projects. Let&apos;s connect and explore how we can work together!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
